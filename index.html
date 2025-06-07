@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Música 🎵</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #mensagem {
+      margin-top: 20px;
+      display: none;
+      font-size: 20px;
+      color: #ffd1dc;
+    }
+  </style>
+</head>
+<body>
+
+<h1>💗 Clique no botão para ouvir a música 💗</h1>
+
+<button onclick="playAudio()">▶️ Tocar música</button>
+<p id="mensagem">🎶 Música tocando: I Wanna Be Yours 🎶</p>
+
+<audio id="musica">
+  <source src="iwannabeyours.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio HTML5.
+</audio>
+
+<script>
+  function playAudio() {
+    var audio = document.getElementById("musica");
+    audio.play();
+    document.getElementById("mensagem").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
